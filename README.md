@@ -7,6 +7,8 @@ My cheatsheet which includes my experience working with Android development.
 * [Core Android](#core-android)
 * [Java and Kotlin](#java-kotlin)
 * [Tricky/unknown bugs](#bugs)
+* [Solutions](#solutions)
+
 
 ### Core Android
 
@@ -47,6 +49,15 @@ My cheatsheet which includes my experience working with Android development.
 
 
 
+
+
+### Solutions
+
+* **Achieve toolbar menu ripple effect** - [Learn from here](https://stackoverflow.com/questions/49884021/achieve-toolbar-menu-item-click-ripple-effect)
+    - In short: ?attr/actionBarItemBackground.
+
+* **Make fading edge for a view** - [Learn from here](https://stackoverflow.com/questions/21888674/apply-fading-edges-to-imageview)
+    - Look for the getLeftFadingEdgeStrength() and other relative methods.
 
 
 
