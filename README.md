@@ -1,1 +1,53 @@
-# android-cheatsheet
+# Android Cheatsheet
+
+My cheatsheet which includes my experience working with Android development.
+ 
+# Contents
+
+* [Core Android](#core-android)
+* [Java and Kotlin](#java-kotlin)
+* [Tricky/unknown bugs](#bugs)
+
+### Core Android
+
+
+
+#### Activity and Fragment
+
+* **Some cases when activity's lifecycle transition to another** - [Learn from here](https://developer.android.com/guide/components/activities/state-changes)
+     - Configuration change occurs, which can also triggered by language changing.
+     - App enters multi-window mode and/or resized in this mode. Only the most recent activity that is interacted is in the onResume() state, the other is in onPause() state.
+     - New activity/dialog appears in the foreground, taking focus and partialy/entirely cover the current activity. The current activity enters onPause()/onResume() respectively.
+
+* **Activity launch modes** - [Learn from here](https://developer.android.com/guide/components/activities/tasks-and-back-stack)
+     - SingleTop: If backstack contains A-B:
+        - A new intent arrives for B, B is singleTop: B receives onNewIntent(). Backstack is now A-B.
+        - A new intent arrives for A, A is singleTop: create new instance of A. Backstack is now A-B-A.
+     - SingleTask: Only 1 instance of that activity at the same time. If no instance: create a new task with that activity as the root. Else if there is an instance in another task, system routes the intent to that instance through onNewIntent().
+
+
+
+### Java And Kotlin
+* **StringBuffer vs StringBuilder** - [Learn from here](https://www.journaldev.com/538/string-vs-stringbuffer-vs-stringbuilder)
+
+    | StringBuffer  | StringBuilder |
+    | ------------- | ------------- |
+    | Synchronized  | Not synchronized  |
+    | Thread safe  | Not thread safe  |
+    | Slower  | Faster  |
+
+
+
+
+
+
+
+
+### Tricky/unknown bugs
+
+
+
+
+
+
+
