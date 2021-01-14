@@ -35,9 +35,9 @@ You can also check for others's for more detail:\
 #### Views
 
 * **How can you measure measure/layout performance** - [Learn from here](https://android-developers.googleblog.com/2017/08/understanding-performance-benefits-of.html)
-    - FrameMetris API.
+    - FrameMetrics API.
     
-* **<include>, <merge> tag?**
+* **&lt;include&gt;,  &lt;merge&gt; tag**
 
 * **Should we call invalidate() frequently for views?** - [Learn from here](https://developer.android.com/training/custom-views/optimizing-view?hl=en)
     - Use alternative methods like postInvalidate(), postInvalidateOnAnimation(), etc.
