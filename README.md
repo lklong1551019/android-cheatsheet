@@ -2,9 +2,9 @@
 
 My cheatsheet which includes my experience working with Android development. This does not include the ones that are already mentioned at other sites.
 
-You can also check for others's for more detail: 
-        - https://github.com/MindorksOpenSource/android-interview-questions
-        - https://android.jlelse.eu/android-interview-questions-cheat-sheet-part-ii-bea0633f0da7
+You can also check for others's for more detail:\
+    - https://github.com/MindorksOpenSource/android-interview-questions \
+    - https://android.jlelse.eu/android-interview-questions-cheat-sheet-part-ii-bea0633f0da7
  
 # Contents
 
