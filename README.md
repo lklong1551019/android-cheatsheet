@@ -32,6 +32,23 @@ You can also check for others's for more detail:\
      - SingleTask: Only 1 instance of that activity at the same time. If no instance: create a new task with that activity as the root. Else if there is an instance in another task, system routes the intent to that instance through onNewIntent().
 
 
+#### Views
+
+* **How can you measure measure/layout performance** - [Learn from here](https://android-developers.googleblog.com/2017/08/understanding-performance-benefits-of.html)
+    - FrameMetris API.
+    
+* **<include>, <merge> tag?**
+
+* **Should we call invalidate() frequently for views?** - [Learn from here](https://developer.android.com/training/custom-views/optimizing-view?hl=en)
+    - Use alternative methods like postInvalidate(), postInvalidateOnAnimation(), etc.
+
+* **Adaptive icons** - [Learn from here](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive?hl=en)
+    - Introduced from android 8.0, which can display a variety of shapes accross different devices.
+
+* **Outline provider** - [Learn from here](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive?hl=en)
+    - Used to clip views, which will change views's casting shadow.
+    - When set to null, view won't have shadow.
+
 
 ### Java And Kotlin
 * **StringBuffer vs StringBuilder** - [Learn from here](https://www.journaldev.com/538/string-vs-stringbuffer-vs-stringbuilder)
