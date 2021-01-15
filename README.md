@@ -9,7 +9,7 @@ You can also check for others's for more detail:\
 # Contents
 
 * [Core Android](#core-android)
-* [Java and Kotlin](#java-kotlin)
+* [Java and Kotlin](#java-and-kotlin)
 * [Tricky/unknown bugs](#bugs)
 * [Solutions](#solutions)
 
