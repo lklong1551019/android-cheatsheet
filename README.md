@@ -66,7 +66,7 @@ You can also check for others's for more detail:\
 
 
 
-### Tricky/unknown bugs
+### Tricky or unknown bugs
 
 
 
