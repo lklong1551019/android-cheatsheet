@@ -10,7 +10,7 @@ You can also check for others's for more detail:\
 
 * [Core Android](#core-android)
 * [Java and Kotlin](#java-and-kotlin)
-* [Tricky/unknown bugs](#bugs)
+* [Tricky or unknown bugs](#tricky-or-unknown-bugs)
 * [Solutions](#solutions)
 
 
