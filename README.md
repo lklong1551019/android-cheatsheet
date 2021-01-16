@@ -50,7 +50,41 @@ You can also check for others's for more detail:\
     - When set to null, view won't have shadow.
 
 
+#### Permissions
+
+* **Install-time permission** - [Learn from here](https://developer.android.com/guide/topics/permissions/overview#install-time)
+
+* **Run-time permission** - [Learn from here](https://developer.android.com/guide/topics/permissions/overview#runtime)
+
+* **Special permission** - [Learn from here](https://developer.android.com/guide/topics/permissions/overview#special)
+   
+
+#### Android Versions
+
+* **Marshmallow (Android 6)** - [Learn from here](https://developer.android.com/about/versions/marshmallow?authuser=1)
+    - Run-time permission.
+    - Doze and App Standby.
+    - Apache HTTP Client Removal.
+    - TextSelection: when user selects text, can show actions like copy, cut, etc in a floating toolbar.
+    - App can no longer forced device to connect to a specific wifi network.
+    - APK file is considered corrupt is a file is declared in manifest file but not present in the APK.
+    - Device connection
+
+* **Lollipop (Android 5)** - [Learn from here](https://developer.android.com/about/versions/lollipop?authuser=1)
+    - ART runtime: includes AOT compilation, improves garbage collection.
+    - Improve audio and graphics pipelines.
+    - View now have translation Z to have shadows.
+    - Activity transitions.
+    - Vector drawables
+    - Introduce heads-up notification: small floating window that allows the user to respond or dismiss without leaving the current app.
+    - Multi-networking features: app can query for available networks, request a connection and respond to connectivity lost/gain.
+    - Support for OpenGL ES 3.1.
+    - Multi-channel audio stream mixing, new MediaSession API for controlling media playback.
+    - From API >= 21: webview no longer allows mixed content and 3rd party cookies by default.
+
+
 ### Java And Kotlin
+
 * **StringBuffer vs StringBuilder** - [Learn from here](https://www.journaldev.com/538/string-vs-stringbuffer-vs-stringbuilder)
 
     | StringBuffer  | StringBuilder |
