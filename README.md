@@ -52,6 +52,12 @@ You can also check for others's for more detail:\
 
 #### Permissions
 
+
+#### Performance
+
+* **Doze and App Standby** - [Learn from here](https://developer.android.com/training/monitoring-device-state/doze-standby?authuser=1)
+
+
 * **Install-time permission** - [Learn from here](https://developer.android.com/guide/topics/permissions/overview#install-time)
 
 * **Run-time permission** - [Learn from here](https://developer.android.com/guide/topics/permissions/overview#runtime)
@@ -61,16 +67,34 @@ You can also check for others's for more detail:\
 
 #### Android Versions
 
-* **Marshmallow (Android 6)** - [Learn from here](https://developer.android.com/about/versions/marshmallow?authuser=1)
-    - Run-time permission.
+* **Oreo (Android 8.0)** - [Learn from here](https://developer.android.com/about/versions/oreo/android-8.0?authuser=1)
+    - Picture-in-picture.
+
+* **Nougat (Android 7.0)** - [Learn from here](https://developer.android.com/about/versions/nougat/android-7.0?authuser=1)
+    - Multi-window support.
+    - Notification enhancements - [Learn from here](https://developer.android.com/about/versions/nougat/android-7.0?authuser=1#notification_enhancements).
+    - Improve Doze: applies some CPU and network restrictions on app even when device is not stationary. - [Learn from here](https://developer.android.com/about/versions/nougat/android-7.0?authuser=1#doze_on_the_go)
+    - Remove 3 implicit broadcasts: CONNECTIVITY_ACTION, ACTION_NEW_PICTURE, ACTION_NEW_VIDEO, as they can wake up background processes of multiple apps at once and hence not good for memory and battery.
+    - SurfaceView: now has synchronous movement, which improves battery performance(composited in dedicated hardware).
+    - Introduce Data Saver mode: enables user to control over the cellular data usage by apps.
+    - Integrates Vulkan API into the platform.
+    - Quick Settings Tile API: more room, can change what and where tiles are displayed.
+    - Number blocking.
+    - Support more languages.
+    - Webview: ChromeAPK is used to render Android system webview.
+    - OpenGL ES 3.2 API.
+    - FrameMetrics API: allows to monitor UI rendering performance, by providing timing data that the rendering system reports.
+
+* **Marshmallow (Android 6.0)** - [Learn from here](https://developer.android.com/about/versions/marshmallow?authuser=1)
+    - Introduce Run-time permission.
     - Doze and App Standby.
     - Apache HTTP Client Removal.
     - TextSelection: when user selects text, can show actions like copy, cut, etc in a floating toolbar.
     - App can no longer forced device to connect to a specific wifi network.
     - APK file is considered corrupt is a file is declared in manifest file but not present in the APK.
-    - Device connection
+    - Camera: accessing shared resources in camera service prefer high-priority processes, and switch user will cause current camera client used by app to be evicted.
 
-* **Lollipop (Android 5)** - [Learn from here](https://developer.android.com/about/versions/lollipop?authuser=1)
+* **Lollipop (Android 5.0)** - [Learn from here](https://developer.android.com/about/versions/lollipop?authuser=1)
     - ART runtime: includes AOT compilation, improves garbage collection.
     - Improve audio and graphics pipelines.
     - View now have translation Z to have shadows.
