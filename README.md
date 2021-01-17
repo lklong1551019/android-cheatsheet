@@ -68,6 +68,16 @@ You can also check for others's for more detail:\
 
 * **Oreo (Android 8.0)** - [Learn from here](https://developer.android.com/about/versions/oreo/android-8.0?authuser=1)
     - Picture-in-picture.
+    - Notifications:
+        - Notification channels.
+        - Notification dots.
+        - Snoozing.
+    - Autofill framework: helps faster the process of filling in fields.
+    - Downloadable fonts: apps can request fonts from a provider application instead of bundling fonts into APK. This will reduces APK size, allows multiple apps to use the same font, which will saves cellular data, phone memory and disk space.
+    - Autosizing TextView.
+    - Adaptive icons: can display a variety of shapes accross different devices.
+    - Multi-display support: users can move an activity that supports multi-window to another display.
+    - App categories: app can declare a category, which is used to group apps of similar purpose.
 
 * **Nougat (Android 7.0)** - [Learn from here](https://developer.android.com/about/versions/nougat/android-7.0?authuser=1)
     - Multi-window support.
