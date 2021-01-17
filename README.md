@@ -72,12 +72,19 @@ You can also check for others's for more detail:\
         - Notification channels.
         - Notification dots.
         - Snoozing.
-    - Autofill framework: helps faster the process of filling in fields.
+    - Autofill framework: helps fasten the process of filling in fields.
     - Downloadable fonts: apps can request fonts from a provider application instead of bundling fonts into APK. This will reduces APK size, allows multiple apps to use the same font, which will saves cellular data, phone memory and disk space.
     - Autosizing TextView.
     - Adaptive icons: can display a variety of shapes accross different devices.
     - Multi-display support: users can move an activity that supports multi-window to another display.
     - App categories: app can declare a category, which is used to group apps of similar purpose.
+    - Neural Networks API (NNAPI).
+    - Background execution limits:  
+        - Background service limits: While an app is in background (does not have a visible activity or does not have a foreground service running/connected to it), system limits its use of background services(by killing those services when it goes into idle state).
+        - Broadcast limits: apps can no longer register broadcast receiver in manifest for implicit broadcast(except some) because this may trigger many apps to consume resources. They can still register at runtime.
+    - Background location limits: limits how frequently an app can retrieve location while running in background.
+    - Video thumbnail extractor: new getScaledFrameAtTime(): returns a bitmap with same aspect ratio as source frame and scale it with given width and heigth. This will save memory (imagine using getFrameAtTime() on a 4K video).
+    - Shared Memory API: share data between apps or between multiple processes within a single app.
 
 * **Nougat (Android 7.0)** - [Learn from here](https://developer.android.com/about/versions/nougat/android-7.0?authuser=1)
     - Multi-window support.
