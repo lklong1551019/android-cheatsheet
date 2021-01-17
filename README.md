@@ -50,13 +50,12 @@ You can also check for others's for more detail:\
     - When set to null, view won't have shadow.
 
 
-#### Permissions
-
-
 #### Performance
 
 * **Doze and App Standby** - [Learn from here](https://developer.android.com/training/monitoring-device-state/doze-standby?authuser=1)
 
+
+#### Permissions
 
 * **Install-time permission** - [Learn from here](https://developer.android.com/guide/topics/permissions/overview#install-time)
 
