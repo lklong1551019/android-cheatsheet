@@ -84,6 +84,9 @@ You can also check for others's for more detail:\
     - Webview: ChromeAPK is used to render Android system webview.
     - OpenGL ES 3.2 API.
     - FrameMetrics API: allows to monitor UI rendering performance, by providing timing data that the rendering system reports.
+    - Introduce App Shortcuts - [Learn from here](https://developer.android.com/about/versions/nougat/android-7.1#shortcuts).
+    - Image keyboard support: let user input images and other contents directly in a keyboard.
+    - Storage manager intent: taking user to the system's free up space screen.
 
 * **Marshmallow (Android 6.0)** - [Learn from here](https://developer.android.com/about/versions/marshmallow?authuser=1)
     - Introduce Run-time permission.
