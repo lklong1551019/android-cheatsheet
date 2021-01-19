@@ -66,6 +66,13 @@ You can also check for others's for more detail:\
 
 #### Android Versions
 
+* **Pie (Android 9.0)** - [Learn from here](https://developer.android.com/about/versions/pie)
+    - Display cutout support.
+    - Notification enhancements: Users can reply/enter text directly from a notification, apps can display images in messaging notifications.
+    - Multi-camera support and camera updates: access streams simultaneously from 2 or more physical cameras.
+    - Introduces ImageDecoder for drawables and bitmaps:.
+    - Introduces AnimatedImageDrawable for drawing and displaying GIF and WebP animated images.
+
 * **Oreo (Android 8.0)** - [Learn from here](https://developer.android.com/about/versions/oreo/android-8.0?authuser=1)
     - Picture-in-picture.
     - Notifications:
@@ -159,6 +166,7 @@ You can also check for others's for more detail:\
 
 * **Only allow to perform click on a portion of a custom view?**
     - Override onTouchEvent(). Remember to check if you actually need to handle (if your custom view does not set any click listener, and the parent view group has set a click listener to do something ...)
+
 ```java
 @Override
     public boolean onTouchEvent(MotionEvent event) {
