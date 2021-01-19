@@ -49,6 +49,14 @@ You can also check for others's for more detail:\
     - Used to clip views, which will change views's casting shadow.
     - When set to null, view won't have shadow.
 
+* **AnimatedImageDrawable and AnimatedVectorDrawable** - [Learn from here](https://developer.android.com/about/versions/pie/android-9.0#animation)
+    - They works simillarly in that the render thread drives the animations. And the render thread also uses a worker thread to decode.
+
+* **ImageDecoder** - [Learn from here](https://developer.android.com/about/versions/pie/android-9.0#decoding-images)
+    - Can handle gifs, WebP (which it will return an AnimatedImageDrawable).
+    - Can decode image from byte buffer, file or URI.
+    - Can perform post-processing, error handling, cropping, scaling.
+
 
 #### Performance
 
@@ -72,6 +80,11 @@ You can also check for others's for more detail:\
     - Multi-camera support and camera updates: access streams simultaneously from 2 or more physical cameras.
     - Introduces ImageDecoder for drawables and bitmaps:.
     - Introduces AnimatedImageDrawable for drawing and displaying GIF and WebP animated images.
+    - Adds support for HDR VP9 profile.
+    - Adds support for encoding images using High Efficiency Image File format(HEIF or HEIC), which improves compression and reduces storage space and network.
+    - Data cost sensitivity for JobScheduler: can use network status to improve the handling of network-related jobs.
+    - New rotation mode that lets user manually change device orientation by pressing a button in the system bar.
+    - Added Precomputed Text: compute and cache required information ahead of time, and this will be performed off the main thread.
 
 * **Oreo (Android 8.0)** - [Learn from here](https://developer.android.com/about/versions/oreo/android-8.0?authuser=1)
     - Picture-in-picture.
