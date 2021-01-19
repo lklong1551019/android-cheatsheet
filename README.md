@@ -157,6 +157,27 @@ You can also check for others's for more detail:\
 * **Make fading edge for a view** - [Learn from here](https://stackoverflow.com/questions/21888674/apply-fading-edges-to-imageview)
     - Look for the getLeftFadingEdgeStrength() and other relative methods.
 
+* **Only allow to perform click on a portion of a custom view?**
+    - Override onTouchEvent(). Remember to check if you actually need to handle (if your custom view does not set any click listener, and the parent view group has set a click listener to do something ...)
+```java
+@Override
+    public boolean onTouchEvent(MotionEvent event) {
+        // We draw everything in this view, so manually handle click if there is any click listener set to it (don't want it
+        // to always consume touch event, if so, the touch event won't be passed to other views that is below this view)
+        if (!hasOnClickListeners())
+            return super.onTouchEvent(event);
+
+        // Width is larger than visible content
+        boolean insideTouchRegion = checkIfInsideTouchRegion(event);
+        if (event.getActionMasked() == MotionEvent.ACTION_UP) {
+            if (insideTouchRegion) {
+                performClick();
+            }
+            return insideTouchRegion;
+        }
+        return insideTouchRegion;
+    }
+```
 
 
 
