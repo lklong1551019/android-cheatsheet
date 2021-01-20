@@ -39,6 +39,15 @@ You can also check for others's for more detail:\
     
 * **&lt;include&gt;,  &lt;merge&gt; tag**
 
+* **How view renders?** - [Learn from here](https://medium.com/better-programming/understand-how-view-renders-in-android-763f0adfb95c)
+
+* **Android internals for rendering a view?** - [Learn from here](https://medium.com/better-programming/android-internals-for-rendering-a-view-430cd394e225)
+
+* **Overdraw?** - [Learn from here](https://developer.android.com/topic/performance/rendering/overdraw)
+    - Refers to the system's drawing a pixel on the screen multiple times in a single frame of rendering. For example, if we have a bunch of stacked UI cards, each card hides a portion of the one below it.
+    - Another source of overdraw: rendering transparent pixels (eg, any kind that involves **transparency**: shadows, fade-outs...).
+
+
 * **Should we call invalidate() frequently for views?** - [Learn from here](https://developer.android.com/training/custom-views/optimizing-view?hl=en)
     - Use alternative methods like postInvalidate(), postInvalidateOnAnimation(), etc.
 
