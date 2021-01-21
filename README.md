@@ -71,6 +71,9 @@ You can also check for others's for more detail:\
 
 * **Doze and App Standby** - [Learn from here](https://developer.android.com/training/monitoring-device-state/doze-standby?authuser=1)
 
+* **Inter Process Communication (IPC)** - [Learn from here](https://developer.android.com/guide/components/processes-and-threads#IPC)
+    - When a method is called from an activity or other app component, but executed remotely in another process: this includes decomposing method call and its data to a level that OS can understand, transmitting it from this process to another, reassembling and reenacting the call there.
+
 
 #### Permissions
 
@@ -94,6 +97,11 @@ You can also check for others's for more detail:\
     - Data cost sensitivity for JobScheduler: can use network status to improve the handling of network-related jobs.
     - New rotation mode that lets user manually change device orientation by pressing a button in the system bar.
     - Added Precomputed Text: compute and cache required information ahead of time, and this will be performed off the main thread.
+    - Limit access to sensors for background apps: cannot access mic/camera, or receive events from accelerometers, etc.
+    - Other privacy changes: restrict access to phone numbers without permissions, access to wifi location and connection information.
+    - Power management: [Learn from here](https://developer.android.com/about/versions/pie/power)
+        - App Standby Buckets: system limits device resources(CPU, battery) available to each app based on which prioriy bucket the app is in (Active, Working set, Frequent, Rare, Never).
+        - Battery saver improvements: background apps do not have network access, location service may be disabled when screen if off, etc.
 
 * **Oreo (Android 8.0)** - [Learn from here](https://developer.android.com/about/versions/oreo/android-8.0?authuser=1)
     - Picture-in-picture.
