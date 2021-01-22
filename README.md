@@ -72,9 +72,6 @@ You can also check for others's for more detail:\
 
 * **Doze and App Standby** - [Learn from here](https://developer.android.com/training/monitoring-device-state/doze-standby?authuser=1)
 
-* **Inter Process Communication (IPC)** - [Learn from here](https://developer.android.com/guide/components/processes-and-threads#IPC)
-    - When a method is called from an activity or other app component, but executed remotely in another process: this includes decomposing method call and its data to a level that OS can understand, transmitting it from this process to another, reassembling and reenacting the call there.
-
 
 #### Permissions
 
@@ -98,11 +95,6 @@ You can also check for others's for more detail:\
     - Data cost sensitivity for `JobScheduler`: can use network status to improve the handling of network-related jobs.
     - New rotation mode that lets user manually change device orientation by pressing a button in the system bar.
     - Added `Precomputed Text`: compute and cache required information ahead of time, and this will be performed off the main thread.
-    - Limit access to sensors for background apps: cannot access mic/camera, or receive events from accelerometers, etc.
-    - Other privacy changes: restrict access to phone numbers without permissions, access to wifi location and connection information.
-    - Power management: [Learn from here](https://developer.android.com/about/versions/pie/power)
-        - App Standby Buckets: system limits device resources(CPU, battery) available to each app based on which prioriy bucket the app is in (Active, Working set, Frequent, Rare, Never).
-        - Battery saver improvements: background apps do not have network access, location service may be disabled when screen if off, etc.
 
 * **Oreo (Android 8.0)** - [Learn from here](https://developer.android.com/about/versions/oreo/android-8.0?authuser=1)
     - Picture-in-picture.
@@ -166,6 +158,8 @@ You can also check for others's for more detail:\
 
 ### Java And Kotlin
 
+#### Java
+
 * **StringBuffer vs StringBuilder** - [Learn from here](https://www.journaldev.com/538/string-vs-stringbuffer-vs-stringbuilder)
 
     | StringBuffer  | StringBuilder |
@@ -174,10 +168,22 @@ You can also check for others's for more detail:\
     | Thread safe  | Not thread safe  |
     | Slower  | Faster  |
 
+#### Kotlin
 
+* **Coroutines** - [Learn from here](https://elizarov.medium.com/blocking-threads-suspending-coroutines-d33e11bf4761)
+    - Suspending functions **do not** block the caller thread, but needed to use the `withContext(Dispatchers)`.
 
+* **Coroutine Dispatchers** - [Learn from here](https://elizarov.medium.com/blocking-threads-suspending-coroutines-d33e11bf4761)
+    - Default: optimized to do CPU-bound functions.
+        - Backed by a thread pool with as many threads as there are CPU cores in system.
+        - Does not over-allocate threads.
+    - IO: optimized to execute IO-bound codes.
+        - If a device has 4 core with 4 threads allocated to default dispatcher, and all of them are blocked in IO: our device is **under-utilized**.
+        - Allocates addtional threads on top of the ones allocated to the **default dispatcher**, so can fully utilize machine's CPU resources and do blocking IO at the same time.
 
-
+* **CPU-bound code vs IO-bound code** - [Learn from here](https://elizarov.medium.com/blocking-threads-suspending-coroutines-d33e11bf4761)
+    - CPU-bound code: consume CPU resources.
+    - IO-bound code: Does not actually consume CPU resources.
 
 
 
@@ -226,6 +232,9 @@ You can also check for others's for more detail:\
 
 * **OnBackPressedDispatcher** - [Learn from here](https://medium.com/@miloszlewandowski/how-androidx-changes-the-way-we-work-with-activities-and-fragments-73b88d157678)
     - No longer needed to override `onbackPressed()` of activity to achieve logics you want, instead use this method in any place that has access to activity. This will gives more flexibility.
+
+* **FragmentContainerView** - [Learn from here](https://medium.com/@miloszlewandowski/how-androidx-changes-the-way-we-work-with-activities-and-fragments-73b88d157678)
+    - If using `FrameLayout` as a parent to your fragment, use this instead. It fixes some bugs include window insets dispatching.
 
 
 
