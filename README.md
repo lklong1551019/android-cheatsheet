@@ -134,7 +134,7 @@ You can also check for others's for more detail:\
         - Broadcast limits: apps can no longer register broadcast receiver in manifest for implicit broadcast(except some) because this may trigger many apps to consume resources. They can still register at runtime.
     - Background location limits: limits how frequently an app can retrieve location while running in background.
     - Video thumbnail extractor: new `getScaledFrameAtTime()`: returns a bitmap with same aspect ratio as source frame and scale it with given width and heigth. This will save memory (imagine using `getFrameAtTime()` on a 4K video).
-    - Shared Memory API: share data between apps or between multiple processes within a single app.
+    - `SharedMemory` API: share data between apps or between multiple processes within a single app.
 
 * **Nougat (Android 7.0)** - [Learn from here](https://developer.android.com/about/versions/nougat/android-7.0?authuser=1)
     - Multi-window support.
