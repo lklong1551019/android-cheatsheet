@@ -84,7 +84,22 @@ You can also check for others's for more detail:\
 
 #### Android Versions
 
-* **Pie (Android 9.0)** - [Learn from here](https://developer.android.com/about/versions/pie)
+* **Android 10** - [Learn from here](https://developer.android.com/about/versions/10?authuser=2)
+    - Foldables.
+    - 5G.
+    - Smart reply in notifications: uses on-device ML to suggest contextual actions like replies for messages or opening a map for an address in the notification. App can custom its own replies.
+    - Dark theme: adds system-wide dark theme (ideal for low light/helps save battery). System can also create dark theme dynamically for apps (Force Dark feature).
+    - Gesture navigation: eliminates nav bar, use edge swipes instead.
+    - Settings panel: app can show key system settings(network, NFC, volume) directly in a floating panel.
+    - Sharing shortcuts: let user jump directly to a specific activity in apps with content attached.
+    - Privacy for users:
+        - More control over location data: new permission option that allow app to access location only when foreground.
+        - Preventing device tracking: apps can no longer access non-resettable ids like device serial number, etc. Device's MAC address is randomized when connected to WIFI.
+        - Apps are given scoped storage into external storage(don't need to request any storage-related permission): can see files in app-specific directory, medias that app created from media store.
+    - Blocking unwanted interruptions: prevent app launches unexpectedly.
+    
+
+* **Pie (Android 9)** - [Learn from here](https://developer.android.com/about/versions/pie)
     - Display cutout support.
     - Notification enhancements: Users can reply/enter text directly from a notification, apps can display images in messaging notifications.
     - Multi-camera support and camera updates: access streams simultaneously from 2 or more physical cameras.
