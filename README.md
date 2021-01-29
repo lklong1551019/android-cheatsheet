@@ -32,6 +32,8 @@ You can also check for others's for more detail:\
         - A new intent arrives for A, A is singleTop: create new instance of A. Backstack is now A-B-A.
      - SingleTask: Only 1 instance of that activity at the same time. If no instance: create a new task with that activity as the root. Else if there is an instance in another task, system routes the intent to that instance through `onNewIntent()`.
 
+* **Passing data between fragments** - [Learn from here](https://proandroiddev.com/android-fragments-fragment-result-805a6b2522ea)
+
 
 #### Views
 
@@ -209,6 +211,21 @@ You can also check for others's for more detail:\
 
 ### Tricky or unknown bugs
 
+* **Add a new fragment, it has enter animation but does not have exit animation?** - [Reason](https://stackoverflow.com/questions/59434290/no-field-with-the-name-mlistener-is-found-in-animation-class)
+    - Here's the logcat:
+
+```Java
+E/FragmentManager: No field with the name mListener is found in Animation class
+    java.lang.NoSuchFieldException: No field mListener in class Landroid/view/animation/Animation; (declaration of 'android.view.animation.Animation' appears in /system/framework/framework.jar!classes3.dex)
+        at java.lang.Class.getDeclaredField(Native Method)
+        at androidx.fragment.app.FragmentManagerImpl.getAnimationListener(FragmentManager.java:1301)
+        at androidx.fragment.app.FragmentManagerImpl.setHWLayerAnimListenerIfAlpha(FragmentManager.java:1283)
+        at androidx.fragment.app.FragmentManagerImpl.moveFragmentToExpectedState(FragmentManager.java:1811)
+        at androidx.fragment.app.FragmentManagerImpl.moveToState(FragmentManager.java:1852)
+        at androidx.fragment.app.FragmentManagerImpl.executeOpsTogether(FragmentManager.java:2426)
+        at androidx.fragment.app.FragmentManagerImpl.removeRedundantOperationsAndExecute(FragmentManager.java:2372)
+        at androidx.fragment.app.FragmentManagerImpl.execPendingActions(FragmentManager.java:2273)
+```
 
 
 
