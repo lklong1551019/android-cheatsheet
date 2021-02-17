@@ -207,6 +207,9 @@ You can also check for others's for more detail:\
     - CPU-bound code: consume CPU resources.
     - IO-bound code: Does not actually consume CPU resources.
 
+* **Inline function** - TBA
+    - No runtime overhead.
+
 
 
 ### Tricky or unknown bugs
