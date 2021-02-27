@@ -93,6 +93,9 @@ You can also check for others's for more detail:\
     - Chat bubbles.
     - Improve IME transitions.
     - Introduce Quick Access Device Controls feature: allows the user to quickly view and control external devices such as lights, thermostats, and cameras from the Android power menu.
+    - Storage, location updates.
+    - NN API 1.3.
+    - NDK `ImageDecoder` API.
 
 * **Android 10** - [Learn from here](https://developer.android.com/about/versions/10?authuser=2)
     - Foldables.
