@@ -86,6 +86,14 @@ You can also check for others's for more detail:\
 
 #### Android Versions
 
+* **Android 11** - [Learn from here](https://developer.android.com/about/versions/11)
+    - One-time permission.
+    - Permissions auto-reset.
+    - Update how media controls are displayed.
+    - Chat bubbles.
+    - Improve IME transitions.
+    - Introduce Quick Access Device Controls feature: allows the user to quickly view and control external devices such as lights, thermostats, and cameras from the Android power menu.
+
 * **Android 10** - [Learn from here](https://developer.android.com/about/versions/10?authuser=2)
     - Foldables.
     - 5G.
@@ -97,7 +105,7 @@ You can also check for others's for more detail:\
     - Privacy for users:
         - More control over location data: new permission option that allow app to access location only when foreground.
         - Preventing device tracking: apps can no longer access non-resettable ids like device serial number, etc. Device's MAC address is randomized when connected to WIFI.
-        - Apps are given scoped storage into external storage(don't need to request any storage-related permission): can see files in app-specific directory, medias that app created from media store.
+        - Apps are given scoped access into external storage(don't need to request any storage-related permission): can see files in app-specific directory, medias that app created from media store.
     - Blocking unwanted interruptions: prevent app launches unexpectedly.
     
 
@@ -135,7 +143,6 @@ You can also check for others's for more detail:\
         - Background service limits: While an app is in background (does not have a visible activity or does not have a foreground service running/connected to it), system limits its use of background services(by killing those services when it goes into idle state).
         - Broadcast limits: apps can no longer register broadcast receiver in manifest for implicit broadcast(except some) because this may trigger many apps to consume resources. They can still register at runtime.
     - Background location limits: limits how frequently an app can retrieve location while running in background.
-    - Video thumbnail extractor: new `getScaledFrameAtTime()`: returns a bitmap with same aspect ratio as source frame and scale it with given width and heigth. This will save memory (imagine using `getFrameAtTime()` on a 4K video).
     - `SharedMemory` API: share data between apps or between multiple processes within a single app.
 
 * **Nougat (Android 7.0)** - [Learn from here](https://developer.android.com/about/versions/nougat/android-7.0?authuser=1)
