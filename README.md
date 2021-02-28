@@ -74,6 +74,12 @@ You can also check for others's for more detail:\
 
 * **Doze and App Standby** - [Learn from here](https://developer.android.com/training/monitoring-device-state/doze-standby?authuser=1)
 
+* **FlatBuffers** - [Learn from here](https://engineering.fb.com/2015/07/31/android/improving-facebook-s-performance-on-android-with-flatbuffers)
+    - Access to serialized data without parsing/unpacking: represents hierarchical data in a flat binary buffer in such a way that it can still be accessed directly without parsing/unpacking.
+    - Memory efficiency and speed.
+    - Flexible: offers optional fields: has backward compatibility.
+    - Strongly typed.
+
 
 #### Permissions
 
