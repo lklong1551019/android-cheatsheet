@@ -80,6 +80,24 @@ You can also check for others's for more detail:\
     - Flexible: offers optional fields: has backward compatibility.
     - Strongly typed.
 
+#### Thread & Process
+
+* **Process** - [Learn from here](https://developer.android.com/guide/components/processes-and-threads)
+    - By default, all components of the same application run in the same process. However, if you find that you need to control which process a certain component belongs to, you can do so in the manifest file.
+    - Interprocess communication(IPC): [Learn from here](https://developer.android.com/guide/components/processes-and-threads#IPC)
+
+
+* **Thread** - [Learn from here](https://developer.android.com/guide/components/processes-and-threads)
+    - Main thread: - [Learn from here](https://developer.android.com/guide/components/processes-and-threads)
+        - In charge of dispatching events to the appropriate user interface widgets, including drawing events.
+        - All components that run in the same process are instantiated in the UI thread, and system calls to each component are dispatched from that thread
+    - Thread priority: - [Learn from here](https://developer.android.com/topic/performance/threads#main)
+        - Threads in `foreground group` gets ~ 95% of total execution time for device.
+        - A newly created one will with same priority and group memberships as spawning thread.
+        - One cpu core can serve a process/thread at a time. Too many threads will go into `priority and scheduling` issue.
+        - Kotlin's coroutine IO dispatcher allocates additional threads on top of the ones allocated to the default dispatchers to do IO-bound code (and hence fully utilize CPU resources).
+
+
 
 #### Permissions
 
