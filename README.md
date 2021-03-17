@@ -310,6 +310,10 @@ E/FragmentManager: No field with the name mListener is found in Animation class
 * **FragmentContainerView** - [Learn from here](https://medium.com/@miloszlewandowski/how-androidx-changes-the-way-we-work-with-activities-and-fragments-73b88d157678)
     - If using `FrameLayout` as a parent to your fragment, use this instead. It fixes some bugs include window insets dispatching.
 
+* **How View model survives orientation change?** - [Learn from here](https://proandroiddev.com/the-curious-case-of-survival-of-viewmodel-afe074992fbc)
+    - Using `NonConfigurationInstances` to get the saved `ViewModelStore`.
+    - And yes, viewModel won't survive low memory or `finish()` scenarios, cause the viewModelStore will be cleared in those scenarios.
+
 
 
 
