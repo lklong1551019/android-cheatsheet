@@ -211,6 +211,25 @@ You can also check for others's for more detail:\
     - Multi-channel audio stream mixing, new MediaSession API for controlling media playback.
     - From API >= 21: webview no longer allows mixed content and 3rd party cookies by default.
 
+#### Network
+* **Retrofit vs OkHttp** - [Learn from here](https://medium.com/mobile-app-development-publication/okhttp-or-retrofit-for-android-fc00f7aa3daf?source=email-43b67fe77107-1620847883634-digest.reader-f9c208bdbb09-fc00f7aa3daf----0-59------------------58c11afb_224d_41bf_b80d_279e917b7c2a-1-c616f544_7490_4b1b_9d4b_9f12fb602a64)
+    - Retrofit:
+        - Structured URL and parameter construction.
+        - Received API response as our desired object model(by providing a GSON converter factory).
+        - Put network call to background thread automatically and send result to main thread.
+    - OkHttp:
+        - Construct request manually
+        ```java
+            val request = Request.Builder().url("$BASE_URL$BASE_PATH/?" +
+            "$PARAM_ACTION=$VALUE_QUERY&$PARAM_FORMAT=$VALUE_JSON&" +
+            "$PARAM_LIST=$VALUE_SEARCH&$PARAM_SRSEARCH=$searchString")
+            .build()
+        ```
+    
+        - Deserialize the result ourselves: `result = Gson().fromJson(..., Result.class)`
+        - API result is called on background thread.
+        - More dynamic URL formation.
+
 
 ### Java And Kotlin
 
