@@ -263,6 +263,14 @@ You can also check for others's for more detail:\
 * **Inline function** - TBA
     - No runtime overhead.
 
+* **Delegates** - [Learn from here](https://proandroiddev.com/kotlin-delegates-in-android-1ab0a715762d)
+    - A class that provides the value for a property and handles its changes. This allows us to move, or delegate, the getter-setter logic from the property itself to a separate class, letting us reuse this logic.
+    - Provided with the property it's working with via instance of KProperty class, and an object that has the property.
+
+```Kotlin
+class FragmentArgumentDelegate<T: Any> : ReadWriteProperty<Fragment, T> { }
+```
+
 
 
 ### Tricky or unknown bugs
