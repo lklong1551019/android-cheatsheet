@@ -271,6 +271,12 @@ You can also check for others's for more detail:\
 class FragmentArgumentDelegate<T: Any> : ReadWriteProperty<Fragment, T> { }
 ```
 
+* **Scoped functions** - [Learn from here](https://blog.mindorks.com/using-scoped-functions-in-kotlin-let-run-with-also-apply#:~:text=These%20functions%20provide%20a%20way,a%20clean%20and%20concise%20code)
+    - Provide a way to give temporary scope to the object under consideration where specific operations can be applied to the object within the block of code.
+    - `let`, `run`, `also`, `apply`, `with`.
+    - ![Scoped functions](https://github.com/lklong1551019/android-cheatsheet/blob/main/scopedfunction.png)
+
+
 
 
 ### Tricky or unknown bugs
