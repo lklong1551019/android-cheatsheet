@@ -260,8 +260,37 @@ You can also check for others's for more detail:\
     - CPU-bound code: consume CPU resources.
     - IO-bound code: Does not actually consume CPU resources.
 
-* **Inline function** - TBA
+* **Inline function** - [Learn from here](https://stackoverflow.com/questions/44471284/when-to-use-an-inline-function-in-kotlin)
     - No runtime overhead.
+    - Assume we have a function like: 
+```Java
+fun nonInlined(block: () -> Unit) {
+    println("before")
+    block()
+    println("after")
+}
+```
+And when we called it from kotlin:
+```Kotlin
+nonInlined {
+    println("do something here")
+}
+```
+Under the hood, it will create an instance of `Function` to wrap the code inside the lambda:
+```Java
+nonInlined(new Function() {
+    @Override
+    public void invoke() {
+        System.out.println("do something here");
+    }
+});
+```
+So basically, calling this function and passing a lambda to it will always create an instance of a `Function` object(OVERHEAD!). If use the `inline` keyword: no `Function` instance will be created, instead, the code around the invocation of block inside the inlined function will be copied to the call site, so you'll get something like this in the bytecode:
+```Java
+System.out.println("before");
+System.out.println("do something here");
+System.out.println("after");
+```
 
 * **Delegates** - [Learn from here](https://proandroiddev.com/kotlin-delegates-in-android-1ab0a715762d)
     - A class that provides the value for a property and handles its changes. This allows us to move, or delegate, the getter-setter logic from the property itself to a separate class, letting us reuse this logic.
