@@ -229,6 +229,14 @@ You can also check for others's for more detail:\
         - Deserialize the result ourselves: `result = Gson().fromJson(..., Result.class)`
         - API result is called on background thread.
         - More dynamic URL formation.
+        
+#### Glide
+* **DiskCacheStrategy** - [Learn from here](https://futurestud.io/tutorials/glide-caching-basics)
+    - NONE: cache nothing (will still saved in mem cache, so if want to load image from server only, also include skipMemCache = true)
+    - DATA: cache only the original full-res image.
+    - RESOURCE: cache only the final image, after scaling resolution or transformations.
+    - ALL: cache all versions of the image.
+    - AUTOMATIC: intelligently choose a cache strategy based on the resource.
 
 
 ### Java And Kotlin
