@@ -313,8 +313,16 @@ class FragmentArgumentDelegate<T: Any> : ReadWriteProperty<Fragment, T> { }
     - `let`, `run`, `also`, `apply`, `with`.
     - ![Scoped functions](https://github.com/lklong1551019/android-cheatsheet/blob/main/scopedfunction.png)
 
-
-
+* **StateFlow** - [Learn from here](https://developer.android.com/kotlin/flow/stateflow-and-sharedflow)
+    - A state-holder observable flow that emits the current and new state to the collectors.
+    - Unlike Flow, `StateFlow` is hot: collecting from the flow does not trigger any producer code. When a new consumer starts collecting from the flow, it receives the last state in the stream and any subsequent states.
+    - Always have an initial value, keeps the last emitted one.
+    - Its active instance exists independently from the consumers.
+    - All methods of state flow are thread-safe and can be safely invoked from concurrent coroutines without external synchronization.
+    
+* **StateFlow vs LiveData** - [Learn from here](https://developer.android.com/kotlin/flow/stateflow-and-sharedflow)
+    - Both are observable data holder classes.
+    - LiveData.observe() automatically unregister the consumer when the view goes to `STOPPED` state, wheres collecting from `StateFlow` and any other Flow does not stop collecting automatically. To achieve the same behavior, need to collect the flow from a `Lifecycle.repeatOnLifeCycle` block.
 
 ### Tricky or unknown bugs
 
