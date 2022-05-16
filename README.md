@@ -110,6 +110,10 @@ You can also check for others's for more detail:\
 
 #### Android Versions
 
+* **Android 13** - [Learn from here](https://developer.android.com/about/versions/13/behavior-changes-13?authuser=1)
+    - Introduce battery-perserving measures: [Learn from here](https://developer.android.com/about/versions/13/changes/battery?authuser=1#restricted-bucket)
+    - Foreground Services Task Manager: [Learn from here](https://developer.android.com/about/versions/13/changes/fgs-manager?authuser=1)
+
 * **Android 11** - [Learn from here](https://developer.android.com/about/versions/11)
     - One-time permission.
     - Permissions auto-reset.
